@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class HomePage {
 text ="hello boss!";
-personslst: String="";
+personslst: string="";
   constructor() {}
   onTxtChanged(){
     this.text ="hello bosses!!";
