@@ -1,0 +1,13 @@
+<p>
+  person-inpur works!
+<br/>
+<label>New Person Name:</label>
+<ion-input type='text' #personEl> </ion-input>
+<ion-button (click)="addPersonToList(personEl.value)">Submit</ion-button>
+
+<br/>
+
+<ion-input type='text' [(ngModel)]="personName" > </ion-input>
+<ion-button (click)="addPersonToList2()">Submit</ion-button>
+
+<br/>
