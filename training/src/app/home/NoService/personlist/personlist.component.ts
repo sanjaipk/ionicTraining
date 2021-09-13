@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, OnChanges, Component, Input, OnInit } from '@a
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PersonlistComponent implements OnInit,OnChanges {
+
   personList: string[] = ['p1','p2','p3'];
   @Input() persons :string;
 
@@ -22,8 +23,7 @@ export class PersonlistComponent implements OnInit,OnChanges {
   }
 
   ngOnInit() {
-
-console.log (this.persons);
+    //this.personList = this.prsService.personList;
   }
 
 }

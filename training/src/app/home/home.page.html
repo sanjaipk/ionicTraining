@@ -5,19 +5,39 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-    <app-person-inpur (personCreate)="onPersonCreated($event)"></app-person-inpur>
-    <strong>{{text}}</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-button (click)="onTxtChanged()">Click here!!</ion-button>
-    <app-personlist [persons]="personslst"></app-personlist>
+    <div>
+      <strong>{{text}}</strong>
+      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
+          href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-button (click)="onTxtChanged()">Click here!!</ion-button>
+    </div>
+
+    <div style="width: 100%;display: flex;">
+      <div style="width: 48%;border: 1px green solid;">
+        <app-person-inpur (personCreate)="onPersonCreated($event)"></app-person-inpur>
+        <app-personlist [persons]="personslst"></app-personlist>
+      </div>
+      <div style="width: 48%;border: 1px red solid;">
+        <app-personinput></app-personinput>
+        <app-personlist2>
+        </app-personlist2>
+      </div>
+    </div>
+    <div style="width: 100%;display: flex;">
+      <div style="width: 48%;border: 1px yellow solid;">
+        <app-pinp></app-pinp>
+        <app-plist></app-plist>
+      </div>
+      <div style="width: 48%;border: 1px orange solid;">
+        WIP
+      </div>
+    </div>
   </div>
 </ion-content>
